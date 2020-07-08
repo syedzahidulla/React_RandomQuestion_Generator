@@ -25,7 +25,7 @@ export class App extends Component {
 
   updateSubmit = () => {
     console.log(this.state);
-    (this.state.blob!=''||this.state.answer!='')&&alert('Submitted');
+    (this.state.blob !=='' || this.state.answer !== '') && alert('Submitted');
     this.setState({
       blob: '',
       answer: '',
