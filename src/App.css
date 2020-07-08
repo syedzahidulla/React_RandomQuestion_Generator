@@ -1,0 +1,134 @@
+.App {
+  background-color: rgb(238, 233, 192);
+  margin: 10px auto 10px auto;
+  padding-top: 1%;
+  outline: 5px solid #01070c;
+  width: 800px;
+  /*shadow*/
+  -webkit-box-shadow: 7px 7px 7px #000;
+  -moz-box-shadow: 7px 7px 7px #000;
+  box-shadow: 7px 7px 7px #000;
+  display: block;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 80px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+ }
+  
+.question {
+  outline: 1px dotted #01070c;
+  background-color: #f4f7fa;
+  height: 80px;
+  width: 650px;
+  margin: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image{
+  border-radius: 10px;
+  height: 200px;
+  width: 650px;
+  object-fit: contain;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: width .35s ease-in-out;
+}
+
+img:hover{
+  width:700px;
+}
+
+
+.soundWave{
+  float: right;
+  background-color:rgb(238, 233, 192);
+  width:250px;
+  height: 5px;
+  margin: auto;
+  opacity: 0;
+}
+.recording{
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+.startrecording{
+  background-color: blue;
+  border-radius: 20px;
+  border-color: blue;
+  color: #f3f4f5;
+  font-size: 20px;
+  padding: 15px;
+  margin-left: 80px;
+  float: left;
+  outline: none;
+}
+
+.stoprecording{
+  background-color: red;
+  border-radius: 20px;
+  border-color: red;
+  font-size: 20px;
+  color: #f3f4f5;
+  padding: 15px;
+  margin-left: 80px;
+  float: left;
+  outline: none;
+}
+
+.audioFrame {
+  outline: none;
+  float: left;
+  margin-top: 5px;
+  margin-left: 60px;
+}
+
+.answerLabel{
+  margin-top: 20px;
+  width: 200px;
+  font-size: 14px;
+  float: left;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.answerFrame {
+  float: left;
+  outline: none;
+  border: none;
+}
+
+.answer{
+  margin-top: 20px;
+  width:800px
+}
+
+.textarea{
+  resize: horizontal;
+  margin-left: 10px;
+  min-width: 300px;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.submitFrame{
+  margin-top: 25px;
+  background-color: rgb(230, 136, 5);
+  border-radius: 30px;
+  color: #f3f4f5;
+  border-color: red;
+  font-size: 20px;
+  padding: 15px;
+  margin-left: 335px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  align-items: center;
+  outline: none;
+}
