@@ -25,7 +25,8 @@ export class App extends Component {
 
   updateSubmit = () => {
     console.log(this.state);
-    (this.state.blob !=='' || this.state.answer !== '') && alert('Submitted');
+    (this.state.blob !== '' || this.state.answer !== '') &&
+      alert('RESPONSE CAPTURED \nAnswer : ' + this.state.answer+'\nAudio Url :' + this.state.blob);
     this.setState({
       blob: '',
       answer: '',
