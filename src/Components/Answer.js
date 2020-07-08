@@ -5,7 +5,7 @@ function Answer(props) {
         props.answerHandler(e.target.name,e.target.value)
     }
     return (
-        <div className="answer">
+        <div >
             <div>
                 <label className="answerLabel"><b>ENTER ANSWER HERE:</b> </label>
             </div>
