@@ -10,7 +10,7 @@ function QuestionImage(props) {
 
     return (
         <div>
-             <img className="image" src={image} alt="Sample pic for the question will go here"/>
+             <img className="imageComponent" src={image} alt="Sample pic for the question will go here"/>
         </div>
     )
 }

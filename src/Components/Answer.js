@@ -2,7 +2,7 @@ import React from 'react'
 
 function Answer(props) {
     var onAnswer = (e) => {
-        props.answerHandler(e.target.name,e.target.value)
+        props.answerHandler(e.target,e.target.value)
     }
     return (
         <div >

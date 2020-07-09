@@ -1,6 +1,6 @@
 .App {
   background-color: rgb(238, 233, 192);
-  margin: 10px auto 10px auto;
+  margin: 10px auto;
   padding-top: 1%;
   outline: 5px solid #01070c;
   width: 800px;
@@ -29,7 +29,7 @@ h2 {
   margin-left: auto;
 }
 
-.image{
+.imageComponent{
   border-radius: 10px;
   height: 200px;
   width: 650px;
@@ -45,7 +45,6 @@ img:hover{
   width:700px;
 }
 
-
 .soundWave{
   float: right;
   background-color:rgb(238, 233, 192);
@@ -60,42 +59,67 @@ img:hover{
 }
 
 .startrecording{
-  background-color: blue;
-  border-radius: 20px;
-  border-color: blue;
-  color: #f3f4f5;
+  background-color: rgb(251, 251, 255);
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: rgb(7, 7, 7);
+  color: #000000;
   font-size: 20px;
-  padding: 15px;
+  height: 54px;
+  width: 140px;
+  cursor: pointer;
   margin-left: 80px;
   float: left;
   outline: none;
 }
+.startrecording:hover {
+  background-color: #b8b8bb;
+  box-shadow: 0 1px rgb(22, 22, 22);
+}
 
+.startrecording:active {
+  background-color: #56537e;
+  transform: translateY(4px);
+}
+.fa {
+  margin-left: 6px;
+  color: rgb(248, 77, 77);
+}
 .stoprecording{
-  background-color: red;
-  border-radius: 20px;
-  border-color: red;
+  background-color: rgb(251, 251, 255);
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: rgb(7, 7, 7);
+  color: #000000;
   font-size: 20px;
-  color: #f3f4f5;
-  padding: 15px;
+  cursor: pointer;
+  height: 54px;
+  width: 140px;
   margin-left: 80px;
   float: left;
   outline: none;
+}
+.stoprecording:hover {
+  background-color: #b8b8bb;
+  box-shadow: 0 1px rgb(22, 22, 22);
+}
+
+.stoprecording:active {
+  background-color: #56537e;
+  transform: translateY(4px);
 }
 
 .audioFrame {
   outline: none;
   float: left;
-  margin-top: 5px;
-  margin-left: 60px;
+  margin: 5px 0px 0px 60px;
 }
 
 .answerLabel{
-  margin-top: 20px;
+  margin: 60px 0px 0px 70px;
   width: 200px;
   font-size: 14px;
   float: left;
-  margin-left: 70px;
   text-align: left;
 }
 
@@ -107,23 +131,58 @@ img:hover{
 
 .textarea{
   resize: horizontal;
-  margin-left: 10px;
+  margin:20px 0px 0px 10px;
   min-width: 300px;
   max-width: 500px;
   margin-top: 20px;
 }
+.textarea:focus{
+  border: none;
+  outline: solid;
+}
 
 .submitFrame{
   margin-top: 25px;
-  background-color: rgb(230, 136, 5);
-  border-radius: 30px;
-  color: #f3f4f5;
-  border-color: red;
+  background-color: rgb(104, 179, 81);
+  border-radius: 15px;
+  color: #0a0a0a;
+  border-color: rgb(18, 19, 18);
   font-size: 20px;
-  padding: 15px;
+  padding: 5px 15px ;
   margin-left: 335px;
   margin-right: auto;
   margin-bottom: 10px;
+  width: 130px;
+  height: 50px;
   align-items: center;
+   transition: all 0.5s;
+  cursor: pointer;
   outline: none;
+}
+.submitFrame span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitFrame span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.submitFrame:hover:enabled span {
+  padding-right: 25px;
+}
+
+.submitFrame:hover:enabled span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.submitFrame:disabled{
+  opacity: 0.6;
 }

@@ -21,8 +21,7 @@ function Recording(props) {
                 backgroundColor="rgb(238, 233, 192)"
             />
             <audio className="audioFrame" src={blob} controls="controls"></audio>
-            <button className={record ? "stoprecording" : "startrecording"} type="button" name="isRecording" onClick={(e) => props.recordingHandler(e.target.name, !record)}>{record === false ? "Start Recording" : "Stop Recording"}</button>
-
+            <button className={record ? "stoprecording" : "startrecording"} type="button" name="isRecording" onClick={(e) => props.recordingHandler(e.target, !record)}>{record === false ? <div><i className="fa fa-circle" aria-hidden="true" name="isRecording"></i> <b name="isRecording"> RECORD</b></div>  : <div name="isRecording"><i className="fa fa-circle-o-notch fa-spin" name="isRecording" ></i> <b name="isRecording"> STOP</b></div>}</button>
         </div>
     )
 }

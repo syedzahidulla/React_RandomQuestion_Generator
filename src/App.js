@@ -17,22 +17,29 @@ export class App extends Component {
     this.id = Math.floor(Math.random() * 10) + 1;
   }  
   
-  updateHandler = (name, value) => {
+  updateHandler = (targetele, value) => {
+    targetele !== 'blob' && (targetele=targetele.getAttribute('name'));
     this.setState({
-      [name]: value
+      [targetele]: value
     })
   } 
 
   updateSubmit = () => {
     console.log(this.state);
-    (this.state.blob !== '' || this.state.answer !== '') &&
-      alert('RESPONSE CAPTURED \nAnswer : ' + this.state.answer+'\nAudio Url :' + this.state.blob);
-    this.setState({
-      blob: '',
-      answer: '',
-      isRecording: false 
-    })
-    this.id = Math.floor(Math.random() * 10) + 1;
+    if (this.state.blob !== '' || this.state.answer !== '') 
+    {
+      alert('RESPONSE CAPTURED \nAnswer : ' + this.state.answer+'\nAudio Url :' + this.state.blob)
+      this.setState({
+        blob: '',
+        answer: '',
+        isRecording: false 
+      })
+      this.id = Math.floor(Math.random() * 10) + 1;
+    }
+    else {
+      alert('\n Kindly!!! Enter Answer')
+    }
+     
   }
   
   render() {
@@ -43,9 +50,7 @@ export class App extends Component {
         <QuestionImage id={this.id} />
         <Answer value={this.state.answer} answerHandler={this.updateHandler} />
         <Recording recordingHandler={this.updateHandler} isRecording={this.state.isRecording} blob={this.state.blob} />
-        <div >
-          <button className="submitFrame" onClick={this.updateSubmit} disabled={this.state.isRecording}>Submit </button>
-        </div>
+        <button className="submitFrame" onClick={this.updateSubmit} disabled={this.state.isRecording}><span><b>SUBMIT</b></span> </button>
 
       </div>
     )
